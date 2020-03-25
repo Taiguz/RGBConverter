@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Converts different types of RGB pixel formats to one another">
+    <meta name="keywords" content="RGB,RGB888,RGB565,converter,color palette,color map,indexed color">
+    <meta name="author" content="Thiago Angelo Martins">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>RGB Converter</title>
+</head>
+
+<body>
+    <section class="settings-popup">
+        <img src="./img/close.svg" class="settings">
+        <p>Percentage RGB values ? <input type="checkbox"></p>
+        <p>Group type: <select class="material-shadow">
+                <option value="byte">Byte - 8bits</option>
+                <option value="word">Word - 16bits</option>
+                <option value="dword">Dword - 32bits</option>
+            </select></p>
+        <p>Endianess: <select class="material-shadow">
+                <option value="le">little-endian</option>
+                <option value="be">big-endian</option>
+            </select></p>
+    </section>
+    <header>
+        <div></div>
+        <div class="search-bar">
+            <input class="material-shadow" placeholder="#HEX">
+            <select class="material-shadow">
+                <option value="888">RGB888 / RGB32</option>
+                <option value="565">RGB565 / RGB16</option>
+            </select>
+        </div>
+        <div><img class="settings" src="./img/settings.svg"></div>
+    </header>
+    <section class="content">
+        <aside></aside>
+        <section class="cards material-shadow">
+            <section class="card">
+                <header>
+                    <img src="./img/star.svg">
+                    <h2>RGB888 / RGB32</h2>
+                </header>
+                <div class="rgb-slider">
+                    <div class="sliders">
+                        <p>R<input type="range" class="slider"><span>50</span></p>
+                        <p>G<input type="range" class="slider"><span>50</span></p>
+                        <p>B<input type="range" class="slider"><span>50</span></p>
+                    </div>
+                    <div class="rgb-color"></div>
+                </div>
+                <div class="info">
+                    <p>Hex <input class="material-shadow" placeholder="#FFF"></p>
+                    <p>Bytes <input class="material-shadow" placeholder="89 89"></p>
+                    <p>Binary <input class="material-shadow" placeholder="111100111111"></p>
+                </div>
+            </section>
+            <section class="card">
+                <header>
+                    <img src="./img/star.svg">
+                    <h2>RGB888 / RGB32</h2>
+                </header>
+                <div class="rgb-slider">
+                    <div class="sliders">
+                        <p>R<input type="range" class="slider"><span>50</span></p>
+                        <p>G<input type="range" class="slider"><span>50</span></p>
+                        <p>B<input type="range" class="slider"><span>50</span></p>
+                    </div>
+                    <div class="rgb-color"></div>
+                </div>
+                <div class="info">
+                    <p>Hex <input class="material-shadow" placeholder="#FFF"></p>
+                    <p>Bytes <input class="material-shadow" placeholder="89 89"></p>
+                    <p>Binary <input class="material-shadow" placeholder="111100111111"></p>
+                </div>
+            </section>
+            <section class="card">
+                <header>
+                    <img src="./img/star.svg">
+                    <h2>RGB888 / RGB32</h2>
+                </header>
+                <div class="rgb-slider">
+                    <div class="sliders">
+                        <p>R<input type="range" class="slider"><span>50</span></p>
+                        <p>G<input type="range" class="slider"><span>50</span></p>
+                        <p>B<input type="range" class="slider"><span>50</span></p>
+                    </div>
+                    <div class="rgb-color"></div>
+                </div>
+                <div class="info">
+                    <p>Hex <input class="material-shadow" placeholder="#FFF"></p>
+                    <p>Bytes <input class="material-shadow" placeholder="89 89"></p>
+                    <p>Binary <input class="material-shadow" placeholder="111100111111"></p>
+                </div>
+            </section>
+            <section class="card">
+                <header>
+                    <img src="./img/star.svg">
+                    <h2>RGB888 / RGB32</h2>
+                </header>
+                <div class="rgb-slider">
+                    <div class="sliders">
+                        <p>R<input type="range" class="slider"><span>50</span></p>
+                        <p>G<input type="range" class="slider"><span>50</span></p>
+                        <p>B<input type="range" class="slider"><span>50</span></p>
+                    </div>
+                    <div class="rgb-color"></div>
+                </div>
+                <div class="info">
+                    <p>Hex <input class="material-shadow" placeholder="#FFF"></p>
+                    <p>Bytes <input class="material-shadow" placeholder="89 89"></p>
+                    <p>Binary <input class="material-shadow" placeholder="111100111111"></p>
+                </div>
+            </section>
+            <section class="card">
+                <header>
+                    <img src="./img/star.svg">
+                    <h2>RGB888 / RGB32</h2>
+                </header>
+                <div class="rgb-slider">
+                    <div class="sliders">
+                        <p>R<input type="range" class="slider"><span>50</span></p>
+                        <p>G<input type="range" class="slider"><span>50</span></p>
+                        <p>B<input type="range" class="slider"><span>50</span></p>
+                    </div>
+                    <div class="rgb-color"></div>
+                </div>
+                <div class="info">
+                    <p>Hex <input class="material-shadow" placeholder="#FFF"></p>
+                    <p>Bytes <input class="material-shadow" placeholder="89 89"></p>
+                    <p>Binary <input class="material-shadow" placeholder="111100111111"></p>
+                </div>
+            </section>
+
+        </section>
+        <aside></aside>
+    </section>
+</body>
+
+</html>
