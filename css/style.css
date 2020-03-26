@@ -52,20 +52,19 @@ section.content{
     width: 100%;
     height: 91vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 aside{
     width: 10%;
-    height:100%;
 }
 section.cards{
     width: 80%;
-    height:100%;
+    /* height: 100%; */
     display: flex;
     /* flex: 1; */
     flex-wrap: wrap;
-    padding-top: 60px;
+    padding-top: 40px;
     justify-content: center;
     align-items: flex-start;
 }
@@ -159,7 +158,17 @@ div.info input{
     border: 1px solid #999999;
     padding: 4px;
 }
+input.number-input{
+    background-color: #333333;
+    color: #999999;
+    border: 1px solid #999999;
+    width: 55px;
+    font-size: 24px;
+    padding: 0px;
+    margin: 0;
+}
 section.settings-popup{
+    display: none;
     position: absolute;
     right: 2vw;
     top:10vh;
@@ -170,7 +179,6 @@ section.settings-popup{
     font-size: 22px;
     border-radius: 8px;
     border: 1px solid #999999;
-    display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
@@ -204,7 +212,7 @@ section.settings-popup select{
     height: 15px;
     border-radius: 5px;
     margin-left: 10px;
-    margin-right: 10px;  
+    margin-right: 7px;  
     background: #999999;
     outline: none;
     -webkit-transition: .2s;
