@@ -44,6 +44,7 @@ class Emitter extends Validator {
             },
         ]
         this.RGBCards = []
+        this.endianess = true // false -little true - big
         this.selectRGB = document.querySelector('.search-bar select')
         this.hexValue = document.querySelector('.search-bar input')
         this.cardContainer = document.querySelector('.cards')

@@ -8,6 +8,7 @@ export default class RGBCard extends Validator {
         this.emitter = parameters.emitter
 
         this.sliders = []
+        this.infos = []
         this.createCard()
         this.appendEvents()
     }
@@ -41,18 +42,35 @@ export default class RGBCard extends Validator {
     }
     displayColor(rgb) {
         let transformedRgb = []
+        let displayHex = ''
+        let bits = []
+        let bitsLength = 0
         rgb.forEach(color => {
             let colorValue
             const bitsFrom = color.bits
             const bitsTo = 8
+            bitsLength += color.bits
+            displayHex += `${parseInt(color.value).toString(16).padStart(2, '0')}`.toUpperCase()
+            bits.push(parseInt(color.value).toString(2).padStart(color.bits, '0'))
             colorValue = this.transformBits(color.value, bitsFrom, bitsTo)
             transformedRgb.push(colorValue)
         })
+        this.hexInput.value = displayHex
+        if (this.emitter.endianess)
+            bits.reverse()
+        let intValue = parseInt(bits.join(''), 2)
+        let int8 = []
+        while (bitsLength > 0) {
+            int8.push(intValue & 0xFF)
+            intValue = intValue >> 8
+            bitsLength -= 8
+        }
+        this.bytesInput.value = int8.join(' ')
+        this.binaryInput.value = bits.reverse().join('')
         const [red, green, blue] = transformedRgb
-
         this.colorBox.style.backgroundColor = `rgb(${red},${green},${blue})`
         return `${parseInt(red).toString(16)}${parseInt(green)
-            .toString(16).padStart(2, '0')}${parseInt(blue).toString(16).padStart(2, '0')}`
+            .toString(16).padStart(2, '0')}${parseInt(blue).toString(16).padStart(2, '0')}`.toUpperCase()
     }
     transformBits(value, bitsFrom, bitsTo) {
         const difference = Math.abs(bitsFrom - bitsTo)
