@@ -9,3 +9,5 @@ This format is the most common used on web development.
 This pixel format is made of 16 bits, it can represent less colors than the 32 bits one.
 The first byte is for red, the second for green, it has an extra bit cause the human eye is more sensitive for the green color, and last byte is for blue.
 You can find this format on old video game color palettes like the first playstation games.
+# Demonstration on GitHub Pages
+[RGB Converter](https://taiguz.github.io/RGBConverter/)
